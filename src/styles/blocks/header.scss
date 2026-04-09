@@ -7,11 +7,11 @@
   }
 
   @include break-point-max($bp-xl) {
-    max-width: 1200px;
+    max-width: $bp-xl;
   }
 
   @include break-point-max($bp-lg) {
-    max-width: 1024px;
+    max-width: $bp-lg;
   }
 
   &__list {
