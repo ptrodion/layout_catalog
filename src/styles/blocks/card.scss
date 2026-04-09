@@ -10,15 +10,15 @@
   grid-template-columns: repeat(var(--column-count-grid), 200px);
   padding: 50px 40px;
 
-  @include break-point-min(488px) {
+  @include break-point-min($bp-sm) {
     --column-count-grid: 2;
   }
 
-  @include break-point-min(768px) {
+  @include break-point-min($bp-md) {
     --column-count-grid: 3;
   }
 
-  @include break-point-min(1024px) {
+  @include break-point-min($bp-lg) {
     --column-count-grid: 4;
   }
 }
@@ -30,7 +30,7 @@
   background-color: $background-color;
   font-family: $font;
 
-  transition: $transition_transform;
+  transition: $transition-transform;
   transform-origin: center;
 
   &:hover {
@@ -48,12 +48,11 @@
     @include text(12px, 500, 18px, $color-primary);
 
     margin: 0 0 4px;
-    transition: $transition_color;
+    transition: $transition-color;
   }
 
   &:hover &__name {
     color: $color-hover;
-    transition: $transition_color;
   }
 
   &__code {
@@ -99,9 +98,10 @@
     text-align: center;
     border-radius: 5px;
     border: 1px solid transparent;
-    transition: $transition_color;
-    transition: background-color 0.3s ease;
-    transition: border-color 0.3s ease;
+    transition:
+      $transition-color,
+      background-color 0.3s ease,
+      border-color 0.3s ease;
 
     &:hover {
       background-color: $background-color;

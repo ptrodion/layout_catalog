@@ -6,11 +6,11 @@
     padding: 0 50px;
   }
 
-  @include break-point-max(1200px) {
+  @include break-point-max($bp-xl) {
     max-width: 1200px;
   }
 
-  @include break-point-max(1024px) {
+  @include break-point-max($bp-lg) {
     max-width: 1024px;
   }
 
@@ -24,7 +24,7 @@
 
     height: 60px;
     text-transform: uppercase;
-    transition: $transition_color;
+    transition: $transition-color;
 
     &:hover {
       color: $color-accent;
